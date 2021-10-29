@@ -70,6 +70,15 @@ class Firm {
         competition.calculateData(getAction(),getActionsOfOtherFirms());
     }
 
+    public void MatrixOutput() {
+
+        for (int i = 0; i < qlearning.returnMatrix().length; i++) {
+            for (int j = 0; j < qlearning.returnMatrix().length; j++) {
+                System.out.println(i+". Zeile und " + j + ".Spalte: Wert "+ (qlearning.returnMatrix()[i][j]) + " ");
+            }
+        }
+    }
+
     /**
      * @return array of all other firms' actions from the point of view of this particular firm
      */

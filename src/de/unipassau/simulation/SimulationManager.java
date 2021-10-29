@@ -11,11 +11,11 @@ import java.util.concurrent.TimeUnit;
 class SimulationManager {
 
     static final SimulationRun.Timing TIMING = SimulationRun.Timing.SIMULTANEOUS;       // Timing of interaction among firms
-    static final Competition.Type COMPETITION_TYPE = Competition.Type.QUANTITY;         // Type of competition between firms
+    static final Competition.Type COMPETITION_TYPE = Competition.Type.PRICE;         // Type of competition between firms
     static final int MARKET_SIZE = 2;                                                   // Number of firms in the market
 
     // Simulation settings
-    static final int numberOfSimulationRuns = 10;                                      // Desired number of single simulation runs
+    static final int numberOfSimulationRuns = 1;                                      // Desired number of single simulation runs
     static final int sizeOfActionSet = 101;                                             // Total number of possible states and actions
     static final int maxNumberOfPeriods = sizeOfActionSet * sizeOfActionSet * 5000;     // Maximum number of periods per simulation run
     static final int minNumberOfConvergedPeriods = (int) (maxNumberOfPeriods * 0.0001); // Number of identical periods necessary to assume convergence of the algorithms

@@ -56,6 +56,11 @@ class SimultaneousSimulationRun extends SimulationRun {
 
             super.setNumberOfPeriods(super.getNumberOfPeriods() + 1);
         }
+        for (Firm firm : firms) {
+            if (super.getNumberOfConvergedPeriods() == SimulationManager.minNumberOfConvergedPeriods) {
+                firm.MatrixOutput();
+            }
+        }
     }
 
     /**

@@ -25,6 +25,10 @@ class QLearning {
         rnd = new Random(seed);
     }
 
+    double[][] returnMatrix(){
+        return q;
+    }
+
     /**
      * Carries out one episode of the Q-Learning algorithm. To do so, one first has to determine the current state
      * (= (weighted) price/quantity of the competing firm(s)) and select an action by using a policy
